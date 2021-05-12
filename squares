@@ -1,0 +1,58 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+
+public class Squares extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        Rectangle ONE = new Rectangle();
+        ONE.setX(150.0f);
+        ONE.setY(150.0f);
+        ONE.setHeight(100);
+        ONE.setWidth(100);
+        ONE.setStroke(Color.RED);
+        ONE.setFill(Color.RED);
+        Rectangle TWO = new Rectangle();
+        TWO.setX(250.0f);
+        TWO.setY(250.0f);
+        TWO.setHeight(100);
+        TWO.setWidth(100);
+        TWO.setStroke(Color.GREEN);
+        TWO.setFill(Color.GREEN);
+        Rectangle THREE = new Rectangle();
+        THREE.setX(150.0f);
+        THREE.setY(250.0f);
+        THREE.setHeight(100);
+        THREE.setWidth(100);
+        THREE.setStroke(Color.YELLOW);
+        THREE.setFill(Color.YELLOW);
+        Rectangle FOUR = new Rectangle();
+        FOUR.setX(250.0f);
+        FOUR.setY(150.0f);
+        FOUR.setHeight(100);
+        FOUR.setWidth(100);
+        FOUR.setStroke(Color.BLUE);
+        FOUR.setFill(Color.BLUE);
+        Pane pane = new Pane();
+        {
+            pane.getChildren().add(ONE);
+            pane.getChildren().add(TWO);
+            pane.getChildren().add(THREE);
+            pane.getChildren().add(FOUR);
+
+            Scene scene = new Scene(pane, 500, 500);
+            primaryStage.setTitle("Show Shape");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        }
+
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
